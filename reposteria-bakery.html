@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panadería y Repostería Artesanal | Baristas Bakery</title>
+  <meta name="description" content="Descubre nuestros productos horneados diariamente: croissants franceses, tortas artesanales, galletas y opciones veganas y libres de gluten.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Fuentes tipográficas locales -->
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- CABECERA SUPERIOR -->
+  <header class="top-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 d-none d-md-flex align-items-center gap-2 text-muted small">
+          <i class="bi bi-telephone-fill text-warning fs-5"></i>
+          <span>Atención al cliente: <strong>(01) 456-7890</strong></span>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <a href="index.html" class="brand-logo text-decoration-none justify-content-center">
+            <i class="bi bi-cup-hot-fill"></i> BARISTAS
+          </a>
+        </div>
+        <div class="col-md-4 d-none d-md-flex justify-content-end align-items-center gap-4">
+          <a href="contacto.html" class="header-icon-link" title="Mi Cuenta"><i class="bi bi-person-fill"></i></a>
+          <a href="reservas.html" class="header-icon-link" title="Reservas"><i class="bi bi-calendar-check-fill"></i></a>
+          <a href="menu-general.html" class="header-icon-link position-relative" title="Carrito de Pedidos">
+            <i class="bi bi-bag-fill"></i>
+            <span class="badge-cart">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav class="navbar navbar-expand-lg main-navbar sticky-top">
+    <div class="container">
+      <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Nosotros
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sobre-nosotros.html"><i class="bi bi-book me-2"></i>Nuestra Historia</a></li>
+              <li><a class="dropdown-item" href="equipo.html"><i class="bi bi-people me-2"></i>Baristas y Personal</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+              Nuestra Carta
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="menu-general.html"><i class="bi bi-card-list me-2"></i>Carta Completa</a></li>
+              <li><a class="dropdown-item" href="especialidades-cafe.html"><i class="bi bi-cup-straw me-2"></i>Café de Especialidad</a></li>
+              <li><a class="dropdown-item active" href="reposteria-bakery.html"><i class="bi bi-cake2 me-2"></i>Panadería y Postres</a></li>
+              <li><a class="dropdown-item" href="menu-ejecutivo-desayunos.html"><i class="bi bi-sun me-2"></i>Desayunos y Combos</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="opiniones.html">Opiniones</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <form class="d-flex search-input-group my-2 my-lg-0" role="search">
+          <input class="form-control" type="search" placeholder="Buscar postre o pan..." aria-label="Buscar">
+          <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO DE PÁGINA -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="text-white">Panadería y Repostería Artesanal</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="menu-general.html">Nuestra Carta</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Repostería & Bakery</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- CONTENIDO: CATÁLOGO DE BAKERY -->
+  <main class="container my-5">
+    
+    <div class="text-center mb-5">
+      <span class="text-uppercase fw-bold text-warning letter-spacing-1">Horneado Diario a las 6:30 AM</span>
+      <h2 class="mb-2">El Maridaje Perfecto para Tu Café</h2>
+      <p class="text-muted" style="max-width: 650px; margin: 0 auto;">
+        Elaboramos nuestras recetas con masa madre, harinas seleccionadas, mantequilla pura y opciones adaptadas para intolerancias y estilos de vida saludables.
+      </p>
+    </div>
+
+    <!-- Filtros visuales / Guía de Dietas -->
+    <div class="d-flex justify-content-center flex-wrap gap-3 mb-5">
+      <span class="badge bg-success px-3 py-2 fs-6"><i class="bi bi-leaf me-1"></i> Apto para Veganos</span>
+      <span class="badge bg-warning text-dark px-3 py-2 fs-6"><i class="bi bi-shield-check me-1"></i> Libre de Gluten</span>
+      <span class="badge bg-dark px-3 py-2 fs-6"><i class="bi bi-fire me-1"></i> Horneado Hoy</span>
+    </div>
+
+    <div class="row g-4 mb-5">
+      
+      <!-- Producto 1 (Vegano) -->
+      <div class="col-md-6 col-lg-4">
+        <div class="product-card">
+          <span class="badge-tag badge-vegan">100% Vegano</span>
+          <div class="product-image-container" style="height: 200px;">
+            <img src="assets/images/reposteria-bakery/r1.jpg" alt="Muffin Banana, Nuez & Chía">
+           </div>
+          <h5 class="product-title mt-2">Muffin Banana, Nuez & Chía</h5>
+          <p class="text-muted small">Elaborado sin lácteos ni huevos, endulzado naturalmente con panela orgánica y chía.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="product-price">$4.40</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Muffin Vegano"><i class="bi bi-plus-lg"></i> Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 2 (Vegano) -->
+      <div class="col-md-6 col-lg-4">
+        <div class="product-card">
+          <span class="badge-tag badge-vegan">100% Vegano</span>
+          <div class="product-image-container" style="height: 200px;">
+            <img src="assets/images/reposteria-bakery/r2.jpg" alt="Muffin de Plátano y Nuez">
+          </div>
+          <h5 class="product-title mt-2">Muffin Banana, Nuez & Chía</h5>
+          <p class="text-muted small">Elaborado sin lácteos ni huevos, endulzado naturalmente con panela orgánica.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="product-price">$3.20</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Muffin Vegano"><i class="bi bi-plus-lg"></i> Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 3 (Vegano) -->
+      <div class="col-md-6 col-lg-4">
+        <div class="product-card">
+          <span class="badge-tag badge-vegan">100% Vegano</span>
+          <div class="product-image-container" style="height: 200px;">
+            <img src="assets/images/reposteria-bakery/r3.jpg" alt="Panini Integral Vegano">
+          </div>
+           <h5 class="product-title mt-2">Panini Integral de Verduras</h5>
+           <p class="text-muted small">Pan artesanal de masa madre con zucchini, berenjenas, pimientos al horno y hummus de albahaca.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="product-price">$4.50</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Panini Vegano"><i class="bi bi-plus-lg"></i> Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 4 (Vegano / Sin Gluten) -->
+      <div class="col-md-6 col-lg-4">
+        <div class="product-card">
+          <span class="badge-tag badge-vegan">Vegano / Sin Gluten</span>
+          <div class="product-image-container" style="height: 200px;">
+            <img src="assets/images/reposteria-bakery/r4.jpg" alt="Cookies Avena, Maní & Cacao">
+          </div>
+           <h5 class="product-title mt-2">Cookies Avena, Maní & Cacao</h5>
+           <p class="text-muted small">Pack x2 galletas horneadas con mantequilla de maní casera, avena certificada y nibs de cacao.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="product-price">$3.00</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Cookies Avena & Cacao"><i class="bi bi-plus-lg"></i> Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 5 (Vegano / Sin Gluten) -->
+      <div class="col-md-6 col-lg-4">
+        <div class="product-card">
+          <span class="badge-tag badge-vegan">Vegano / Sin Gluten</span>
+          <div class="product-image-container" style="height: 200px;">
+            <img src="assets/images/reposteria-bakery/r5.jpg" alt="Bowl de Avena">
+          </div>
+           <h5 class="product-title mt-2">Bowl de Avena & Fruta de Estación</h5>
+           <p class="text-muted small">Avena tibia cocida en leche de almendras con mantequilla de maní, banana, arándanos y chía.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="product-price">$4.90</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Bowl de Avena"><i class="bi bi-plus-lg"></i> Añadir</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Producto 6 (Vegano / Sin Gluten)-->
+      <div class="col-md-6 col-lg-4">
+        <div class="product-card">
+          <span class="badge-tag badge-vegan">Vegano / Sin Gluten</span>
+          <div class="product-image-container" style="height: 200px;">
+            <img src="assets/images/reposteria-bakery/r6.jpg" alt="Panqueques de Avena">
+          </div>
+          <h5 class="product-title mt-2">Panqueques de Avena & Plátano</h5>
+          <p class="text-muted small">Torre de panqueques esponjosos a base de harina de avena libre de gluten, acompañados de jarabe de arce.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+           <span class="product-price">$4.60</span>
+           <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Panqueques de Avena"><i class="bi bi-plus-lg"></i> Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 7 (Sin Gluten)-->
+       <div class="col-md-6 col-lg-4">
+        <div class="product-card">
+          <span class="badge-tag bg-warning text-dark">Sin Gluten</span>
+          <div class="product-image-container" style="height: 200px;">
+            <img src="assets/images/reposteria-bakery/r7.jpg"Brownie Belga Gluten-Free">
+          </div>
+          <h5 class="product-title mt-2">Brownie Belga Gluten-Free</h5>
+          <p class="text-muted small">Harina de almendras, chocolate al 70% de origen y trozos de nueces pecana.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+           <span class="product-price">$4.20</span>
+           <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Brownie Gluten-Free"><i class="bi bi-plus-lg"></i> Añadir</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Producto 8 (Sin Gluten)-->
+       <div class="col-md-6 col-lg-4">
+        <div class="product-card">
+          <span class="badge-tag bg-warning text-dark">Sin Gluten</span>
+          <div class="product-image-container" style="height: 200px;">
+            <img src="assets/images/reposteria-bakery/r8.jpg" alt="Cheesecake Vasco Quemado">
+          </div>
+          <h5 class="product-title mt-2">Cheesecake Vasco Quemado</h5>
+          <p class="text-muted small">Interior cremoso y fundente con corteza caramelizada al horno de leña (receta 100% sin harinas).</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="product-price">$4.80</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Cheesecake Vasco"><i class="bi bi-plus-lg"></i> Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 9 (Sin Gluten)-->
+       <div class="col-md-6 col-lg-4">
+        <div class="product-card">
+          <span class="badge-tag bg-warning text-dark">Sin Gluten</span>
+          <div class="product-image-container" style="height: 200px;">
+            <img src="assets/images/reposteria-bakery/r9.jpg" alt="Tarta Fudge Choco-Berry">
+          </div>
+          <h5 class="product-title mt-2">Tarta Fudge Choco-Berry</h5>
+          <p class="text-muted small">Bizcocho húmedo de cacao intenso sin gluten cubierto con coulis fresco de frutos rojos.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="product-price">$4.90</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Tarta Choco-Berry"><i class="bi bi-plus-lg"></i> Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 10 (Horneado hoy)-->
+       <div class="col-md-6 col-lg-4">
+        <div class="product-card">
+          <span class="badge-tag bg-dark text-white">Horneado hoy</span>
+          <div class="product-image-container" style="height: 200px;">
+            <img src="assets/images/reposteria-bakery/r10.jpg" alt="Croissant Relleno de Almendras">
+          </div>
+          <h5 class="product-title mt-2">Croissant Relleno de Almendras</h5>
+          <p class="text-muted small">Masa hojaldrada con frangipane de almendras tostadas y lluvia de azúcar glas.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="product-price">$3.80</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Croissant de Almendras"><i class="bi bi-plus-lg"></i> Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 11 (Horneado hoy)-->
+       <div class="col-md-6 col-lg-4">
+        <div class="product-card">
+          <span class="badge-tag bg-dark text-white">Horneado hoy</span>
+          <div class="product-image-container" style="height: 200px;">
+            <img src="assets/images/reposteria-bakery/r11.jpg" alt="Hogaza Rústica Masa Madre">
+          </div>
+          <h5 class="product-title mt-2">Hogaza Rústica Masa Madre (500g)</h5>
+          <p class="text-muted small">Fermentación lenta de 36 horas. Corteza crujiente y miga elástica para llevar.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="product-price">$5.00</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Hogaza Masa Madre"><i class="bi bi-plus-lg"></i> Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 12 (Horneado hoy)-->
+       <div class="col-md-6 col-lg-4">
+        <div class="product-card">
+          <span class="badge-tag bg-dark text-white">Horneado hoy</span>
+          <div class="product-image-container" style="height: 200px;">
+            <img src="assets/images/reposteria-bakery/r12.jpg" alt="Danesa de Manzana & Canela">
+          </div>
+          <h5 class="product-title mt-2">Danesa de Manzana & Canela</h5>
+          <p class="text-muted small">Hojaldre crujiente de mantequilla pura relleno de compota casera de manzana horneada.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="product-price">$3.60</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Danesa de Manzana"><i class="bi bi-plus-lg"></i> Añadir</button>
+          </div>
+        </div>
+      </div> 
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Información de Contacto</h5>
+          <p><i class="bi bi-geo-alt-fill me-2"></i> Av. Los Cafetales 456, Miraflores</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> (01) 456-7890</p>
+          <p><i class="bi bi-envelope-fill me-2"></i> hola@baristascafeteria.com</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Información</h5>
+          <ul>
+            <li><a href="sobre-nosotros.html"><i class="bi bi-chevron-right me-1"></i> Nuestra Historia</a></li>
+            <li><a href="equipo.html"><i class="bi bi-chevron-right me-1"></i> Maestros Baristas</a></li>
+            <li><a href="menu-general.html"><i class="bi bi-chevron-right me-1"></i> Carta y Productos</a></li>
+            <li><a href="politicas-privacidad.html"><i class="bi bi-chevron-right me-1"></i> Políticas y Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="reservas.html"><i class="bi bi-chevron-right me-1"></i> Reserva de Mesas</a></li>
+            <li><a href="especialidades-cafe.html"><i class="bi bi-chevron-right me-1"></i> Catas y Métodos</a></li>
+            <li><a href="opiniones.html"><i class="bi bi-chevron-right me-1"></i> Reseñas de Clientes</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Boletín Informativo</h5>
+          <p>Suscríbete a novedades y promociones exclusivas.</p>
+          <form class="newsletter-form mt-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Tu correo" required>
+              <button class="btn btn-warning" type="submit">SUSCRÍBETE</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-center">
+        &copy; 2026 <strong>Baristas Cafetería</strong>. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

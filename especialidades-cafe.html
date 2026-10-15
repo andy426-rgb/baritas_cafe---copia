@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café de Especialidad | Baristas - Orígenes y Métodos de Extracción</title>
+  <meta name="description" content="Información sensorial y técnica sobre granos de café de especialidad, notas de cata y métodos de filtrado manual como V60, Chemex y Prensa Francesa.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Fuentes tipográficas locales -->
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- CABECERA SUPERIOR -->
+  <header class="top-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 d-none d-md-flex align-items-center gap-2 text-muted small">
+          <i class="bi bi-telephone-fill text-warning fs-5"></i>
+          <span>Atención al cliente: <strong>(01) 456-7890</strong></span>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <a href="index.html" class="brand-logo text-decoration-none justify-content-center">
+            <i class="bi bi-cup-hot-fill"></i> BARISTAS
+          </a>
+        </div>
+        <div class="col-md-4 d-none d-md-flex justify-content-end align-items-center gap-4">
+          <a href="contacto.html" class="header-icon-link" title="Mi Cuenta"><i class="bi bi-person-fill"></i></a>
+          <a href="reservas.html" class="header-icon-link" title="Reservas"><i class="bi bi-calendar-check-fill"></i></a>
+          <a href="menu-general.html" class="header-icon-link position-relative" title="Carrito de Pedidos">
+            <i class="bi bi-bag-fill"></i>
+            <span class="badge-cart">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav class="navbar navbar-expand-lg main-navbar sticky-top">
+    <div class="container">
+      <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Nosotros
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sobre-nosotros.html"><i class="bi bi-book me-2"></i>Nuestra Historia</a></li>
+              <li><a class="dropdown-item" href="equipo.html"><i class="bi bi-people me-2"></i>Baristas y Personal</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+              Nuestra Carta
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="menu-general.html"><i class="bi bi-card-list me-2"></i>Carta Completa</a></li>
+              <li><a class="dropdown-item active" href="especialidades-cafe.html"><i class="bi bi-cup-straw me-2"></i>Café de Especialidad</a></li>
+              <li><a class="dropdown-item" href="reposteria-bakery.html"><i class="bi bi-cake2 me-2"></i>Panadería y Postres</a></li>
+              <li><a class="dropdown-item" href="menu-ejecutivo-desayunos.html"><i class="bi bi-sun me-2"></i>Desayunos y Combos</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="opiniones.html">Opiniones</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <form class="d-flex search-input-group my-2 my-lg-0" role="search">
+          <input class="form-control" type="search" placeholder="Buscar granos, método..." aria-label="Buscar">
+          <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO DE PÁGINA -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="text-white">Café de Especialidad y Métodos</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="menu-general.html">Nuestra Carta</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Especialidades</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- CONTENIDO: ORÍGENES Y MÉTODOS -->
+  <main class="container my-5">
+    
+    <!-- 1. Sección de Granos de Origen y Perfiles Sensoriales -->
+    <div class="text-center mb-5">
+      <span class="text-uppercase fw-bold text-warning letter-spacing-1">Trazabilidad & Finca</span>
+      <h2 class="mb-2">Nuestros Granos de Origen Seleccionados</h2>
+      <p class="text-muted" style="max-width: 650px; margin: 0 auto;">
+        Trabajamos exclusivamente con micro-lotes de café arábica con puntaje de cata superior a 84 puntos SCA.
+      </p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <!-- Origen 1 -->
+      <div class="col-md-4">
+        <div class="custom-card h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-warning text-dark px-3 py-2 fw-bold">86.5 Pts SCA</span>
+            <span class="text-muted small"><i class="bi bi-geo-alt"></i> Cusco, 1,850 msnm</span>
+          </div>
+          <h4 class="mb-2">Geisha La Convención</h4>
+          <p class="text-muted small"><strong>Variedad:</strong> 100% Geisha | <strong>Proceso:</strong> Lavado Clásico</p>
+          <hr class="border-secondary-subtle">
+          <h6 class="fw-bold mb-2 text-dark"><i class="bi bi-flower1 text-warning me-1"></i> Notas de Cata:</h6>
+          <p class="text-muted small mb-3">
+            Jazmín, bergamota, melocotón blanco, miel de abeja y un final dulce sumamente prolongado. Acidez cítrica brillante.
+          </p>
+          <div class="d-flex justify-content-between align-items-center mt-auto">
+            <span class="product-price">$6.50 / taza</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Geisha La Convención"><i class="bi bi-cup-hot"></i> Degustar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Origen 2 -->
+      <div class="col-md-4">
+        <div class="custom-card h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-warning text-dark px-3 py-2 fw-bold">85.0 Pts SCA</span>
+            <span class="text-muted small"><i class="bi bi-geo-alt"></i> Cajamarca, 1,700 msnm</span>
+          </div>
+          <h4 class="mb-2">Bourbon & Caturra Jaén</h4>
+          <p class="text-muted small"><strong>Variedad:</strong> Bourbon Rojo | <strong>Proceso:</strong> Honey Amarillo</p>
+          <hr class="border-secondary-subtle">
+          <h6 class="fw-bold mb-2 text-dark"><i class="bi bi-cup-hot text-warning me-1"></i> Notas de Cata:</h6>
+          <p class="text-muted small mb-3">
+            Chocolate oscuro, nueces tostadas, panela, manzana roja caramelizada. Cuerpo cremoso y balance impecable.
+          </p>
+          <div class="d-flex justify-content-between align-items-center mt-auto">
+            <span class="product-price">$5.20 / taza</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Bourbon Jaén"><i class="bi bi-cup-hot"></i> Degustar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Origen 3 -->
+      <div class="col-md-4">
+        <div class="custom-card h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-warning text-dark px-3 py-2 fw-bold">85.8 Pts SCA</span>
+            <span class="text-muted small"><i class="bi bi-geo-alt"></i> Villa Rica, 1,650 msnm</span>
+          </div>
+          <h4 class="mb-2">Típica Valle Escondido</h4>
+          <p class="text-muted small"><strong>Variedad:</strong> Típica Antigua | <strong>Proceso:</strong> Natural Anaeróbico</p>
+          <hr class="border-secondary-subtle">
+          <h6 class="fw-bold mb-2 text-dark"><i class="bi bi-balloon text-warning me-1"></i> Notas de Cata:</h6>
+          <p class="text-muted small mb-3">
+            Frutos rojos silvestres, uva negra, licor de cereza y vainilla. Intenso, afrutado y con un cuerpo voluptuoso.
+          </p>
+          <div class="d-flex justify-content-between align-items-center mt-auto">
+            <span class="product-price">$5.80 / taza</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Típica Valle Escondido"><i class="bi bi-cup-hot"></i> Degustar</button>
+          </div>
+        </div>
+      </div>
+
+      <h1>Nuevos Micro-Lotes de Origen</h1>
+      <!-- Origen 1 -->
+      <div class="col-md-4">
+        <div class="custom-card h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-warning text-dark px-3 py-2 fw-bold">86.5 Pts SCA</span>
+            <span class="text-muted small"><i class="bi bi-geo-alt"></i>Cajamarca, 1,800 msnm</span>
+          </div>
+          <h4 class="mb-2">Castillo & Caturra San Ignacio</h4>
+          <p class="text-muted small"><strong>Variedad:</strong> Castillo y Caturra | <strong>Proceso:</strong> Maceración Carbónica 48h</p>
+          <hr class="border-secondary-subtle">
+          <h6 class="fw-bold mb-2 text-dark"><i class="bi bi-flower1 text-warning me-1"></i> Notas de Cata:</h6>
+          <p class="text-muted small mb-3">
+            Flor de azahar, mandarina dulce, miel de agave y cacao nibs. De cuerpo sedoso con un retrogusto limpio y refrescante.
+          </p>
+          <div class="d-flex justify-content-between align-items-center mt-auto">
+            <span class="product-price">$5.40 / taza</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Castillo & Caturra San Ignacio"><i class="bi bi-cup-hot"></i> Degustar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Origen 2 -->
+      <div class="col-md-4">
+        <div class="custom-card h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-warning text-dark px-3 py-2 fw-bold">86.5 Pts SCA</span>
+            <span class="text-muted small"><i class="bi bi-geo-alt"></i> Puno, 1,920 msnm</span>
+          </div>
+          <h4 class="mb-2">Pacamara Alto Inambari</h4>
+          <p class="text-muted small"><strong>Variedad:</strong> 100% Pacamara | <strong>Proceso:</strong> Lavado Doble Fermentación/p>
+          <hr class="border-secondary-subtle">
+          <h6 class="fw-bold mb-2 text-dark"><i class="bi bi-flower1 text-warning me-1"></i> Notas de Cata:</h6>
+          <p class="text-muted small mb-3">
+            Ciruela roja, moras silvestres, azúcar morena y chocolate amargo 80%. Cuerpo denso, cremoso y acidez málica equilibrada.
+          </p>
+          <div class="d-flex justify-content-between align-items-center mt-auto">
+            <span class="product-price">$6.20 / taza</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Pacamara Alto Inambari"><i class="bi bi-cup-hot"></i> Degustar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Origen 3 -->
+      <div class="col-md-4">
+        <div class="custom-card h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-warning text-dark px-3 py-2 fw-bold">86.5 Pts SCA</span>
+            <span class="text-muted small"><i class="bi bi-geo-alt"></i> Junín, 1,600 msnm</span>
+          </div>
+          <h4 class="mb-2">Bourbon Amarillo Chanchamayo</h4>
+          <p class="text-muted small"><strong>Variedad:</strong> Bourbon Amarillo | <strong>Proceso:</strong> Honey Rojo</p>
+          <hr class="border-secondary-subtle">
+          <h6 class="fw-bold mb-2 text-dark"><i class="bi bi-flower1 text-warning me-1"></i> Notas de Cata:</h6>
+          <p class="text-muted small mb-3">
+            Dátiles, caramelo toffee, avellanas tostadas y toque de lima dulce. Taza balanceada con un cuerpo aterciopelado.
+          </p>
+          <div class="d-flex justify-content-between align-items-center mt-auto">
+            <span class="product-price">$5.00 / taza</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Bourbon Amarillo Chanchamayo"><i class="bi bi-cup-hot"></i> Degustar</button>
+          </div>
+        </div>
+      </div>
+
+      <h1>Variedades Exóticas & Altura Extrema</h1>
+      <!-- Origen 1 -->
+      <div class="col-md-4">
+        <div class="custom-card h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-warning text-dark px-3 py-2 fw-bold">86.5 Pts SCA</span>
+            <span class="text-muted small"><i class="bi bi-geo-alt"></i> Cusco, 1,950 msnm</span>
+          </div>
+          <h4 class="mb-2">Typica & Bourbon Santa Teresa</h4>
+          <p class="text-muted small"><strong>Variedad:</strong> Typica Antigua y Bourbon | <strong>Proceso:</strong> Natural Lento 25 Días</p>
+          <hr class="border-secondary-subtle">
+          <h6 class="fw-bold mb-2 text-dark"><i class="bi bi-flower1 text-warning me-1"></i> Notas de Cata:</h6>
+          <p class="text-muted small mb-3">
+            Fresa madura, licor de cacao, maracuyá y canela. Dulzor pronunciado estilo mermelada y cuerpo envolvente.
+          </p>
+          <div class="d-flex justify-content-between align-items-center mt-auto">
+            <span class="product-price">$5.90 / taza</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Typica & Bourbon Santa Teresa"><i class="bi bi-cup-hot"></i> Degustar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Origen 2 -->
+      <div class="col-md-4">
+        <div class="custom-card h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-warning text-dark px-3 py-2 fw-bold">86.5 Pts SCA</span>
+            <span class="text-muted small"><i class="bi bi-geo-alt"></i> Amazonas, 1,750 msnm</span>
+          </div>
+          <h4 class="mb-2">Catimor & Caturra Mendoza</h4>
+          <p class="text-muted small"><strong>Variedad:</strong> Catimor y Caturra <strong>Proceso:</strong> Lavado Tradicional</p>
+          <hr class="border-secondary-subtle">
+          <h6 class="fw-bold mb-2 text-dark"><i class="bi bi-flower1 text-warning me-1"></i> Notas de Cata:</h6>
+          <p class="text-muted small mb-3">
+            Chocolate con leche, nuez de Brasil, vainilla y notas de manzana verde. Taza clásica, balanceada y de aroma dulce.
+          </p>
+          <div class="d-flex justify-content-between align-items-center mt-auto">
+            <span class="product-price">$4.80 / taza</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Catimor & Caturra Mendoza"><i class="bi bi-cup-hot"></i> Degustar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Origen 3 -->
+      <div class="col-md-4">
+        <div class="custom-card h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-warning text-dark px-3 py-2 fw-bold">86.5 Pts SCA</span>
+            <span class="text-muted small"><i class="bi bi-geo-alt"></i> Pasco, 1,900 msnm</span>
+          </div>
+          <h4 class="mb-2">Geisha Reserva Oxapampa</h4>
+          <p class="text-muted small"><strong>Variedad:</strong> 100% Geisha | <strong>Proceso:</strong> Anóxico Natural</p>
+          <hr class="border-secondary-subtle">
+          <h6 class="fw-bold mb-2 text-dark"><i class="bi bi-flower1 text-warning me-1"></i> Notas de Cata:</h6>
+          <p class="text-muted small mb-3">
+            Jazmín, té de lemongrass, durazno en almíbar, lychee y un final especiado brillante. Acidez delicada y elegancia pura.
+          </p>
+          <div class="d-flex justify-content-between align-items-center mt-auto">
+            <span class="product-price">$7.00 / taza</span>
+            <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Geisha Reserva Oxapampa><i class="bi bi-cup-hot"></i> Degustar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Sección de Métodos de Extracción Manual -->
+    <div class="text-center my-5">
+      <span class="text-uppercase fw-bold text-warning letter-spacing-1">Ciencia & Alquimia</span>
+      <h2 class="mb-2">Métodos de Extracción en Nuestra Barra</h2>
+      <p class="text-muted" style="max-width: 650px; margin: 0 auto;">
+        Elige tu método preferido y nuestro barista preparará tu café frente a ti calibrando molienda, agua a 92°C y ratio exacto.
+      </p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <!-- Método 1: V60 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-icon"><i class="bi bi-funnel-fill"></i></div>
+          <h5>Hario V60</h5>
+          <span class="badge bg-secondary mb-2">Filtrado Cónico</span>
+          <p class="text-muted small">
+            Resalta la acidez cítrica, las notas florales y produce una taza limpia y aromática de cuerpo ligero.
+          </p>
+          <div class="fw-bold text-warning">Tiempo: 3:00 min</div>
+        </div>
+      </div>
+
+      <!-- Método 2: Chemex -->
+      <div class="col-md-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-icon"><i class="bi bi-hourglass-split"></i></div>
+          <h5>Chemex</h5>
+          <span class="badge bg-secondary mb-2">Filtro Grueso</span>
+          <p class="text-muted small">
+            Su filtro especial elimina todos los sedimentos y aceites pesados, entregando una taza pura y aterciopelada.
+          </p>
+          <div class="fw-bold text-warning">Tiempo: 4:30 min</div>
+        </div>
+      </div>
+
+      <!-- Método 3: Prensa Francesa -->
+      <div class="col-md-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-icon"><i class="bi bi-archive-fill"></i></div>
+          <h5>Prensa Francesa</h5>
+          <span class="badge bg-secondary mb-2">Inmersión Total</span>
+          <p class="text-muted small">
+            Conserva todos los aceites naturales del grano, logrando un cuerpo robusto, notas a cacao y gran textura.
+          </p>
+          <div class="fw-bold text-warning">Tiempo: 4:00 min</div>
+        </div>
+      </div>
+
+      <!-- Método 4: Aeropress -->
+      <div class="col-md-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-icon"><i class="bi bi-cup-hot-fill"></i></div>
+          <h5>Aeropress & Espresso</h5>
+          <span class="badge bg-secondary mb-2">Presión Manual</span>
+          <p class="text-muted small">
+            Combina inmersión y presión suave de aire para concentrar el dulzor y extraer sabores profundos rápidamente.
+          </p>
+          <div class="fw-bold text-warning">Tiempo: 1:30 min</div>
+        </div>
+      </div>
+
+      <h1>Métodos de Extracción Alternativos & Suaves</h1>
+      <!-- Método 5: Aeropress -->
+      <div class="col-md-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-icon"><i class="bi bi-fire"></i></div>
+          <h5>Sifón Belga</h5>
+          <span class="badge bg-secondary mb-2">Extracción por Vacío</span>
+          <p class="text-muted small">
+            Utiliza la presión del vapor y el vacío para extraer una taza sumamente limpia, aromática y compleja.
+          </p>
+          <div class="fw-bold text-warning">Tiempo: 5:00 min</div>
+        </div>
+      </div>
+
+      <!-- Método 6: Aeropress -->
+      <div class="col-md-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-icon"><i class="bi bi-funnel-fill"></i></div>
+          <h5>Kalita Wave</h5>
+          <span class="badge bg-secondary mb-2">Filtrado de Papel Fino</span>
+          <p class="text-muted small">
+           Su fondo plano con tres agujeros permite una extracción uniforme, destacando un dulzor excepcional.
+          </p>
+          <div class="fw-bold text-warning">Tiempo: 3:30 min</div>
+        </div>
+      </div>
+
+      <!-- Método 7: Aeropress -->
+      <div class="col-md-6 col-lg-3">
+        <div class="method-card">
+           <div class="method-icon"><i class="bi bi-droplet-half"></i></div>
+           <h5>Clever Dripper</h5>
+           <span class="badge bg-secondary mb-2">Inmersión & Goteo</span>
+           <p class="text-muted small">
+             Combina la inmersión total con la limpieza de un filtro de papel mediante una válvula inteligente.
+            </p>
+            <div class="fw-bold text-warning">Tiempo: 3:15 min</div>
+          </div>
+        </div>
+
+      <!-- Método 8: Aeropress -->
+      <div class="col-md-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-icon"><i class="bi bi-disc-fill"></i></div>
+          <h5>Kone Dripper Metal</h5>
+          <span class="badge bg-secondary mb-2">Extracción Japonesa</span>
+          <p class="text-muted small">
+           Filtro metálico de acero que permite el paso de aceites esenciales finos, logrando gran cuerpo y textura sedosa.
+          </p>
+          <div class="fw-bold text-warning">Tiempo: 3:45 min</div>
+        </div>
+      </div>
+
+      <h1>Métodos de Alta Intensidad & Tradicionales</h1>
+      <!-- Método 9: Aeropress -->
+      <div class="col-md-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-icon"><i class="bi bi-cup-hot-fill"></i></div>
+          <h5>Cafetera Moka</h5>
+          <span class="badge bg-secondary mb-2">Tradicional Italiana</span>
+          <p class="text-muted small">
+            Extrae un café denso y concentrado mediante presión de vapor ascendente, ideal para amantes de sabores fuertes.
+          </p>
+          <div class="fw-bold text-warning">Tiempo: 4:15 min</div>
+        </div>
+      </div>
+
+      <!-- Método 10: Aeropress -->
+      <div class="col-md-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-icon"><i class="bi bi-hourglass-split"></i></div>
+          <h5>Torre Cold Drip</h5>
+          <span class="badge bg-secondary mb-2">Extracción en Frío</span>
+          <p class="text-muted small">
+            Goteo lento de agua fría sobre hielo durante horas para obtener notas ultra dulces y cero acidez amarga.
+          </p>
+          <div class="fw-bold text-warning">Tiempo: 6 a 12 hrs</div>
+        </div>
+      </div>
+
+      <!-- Método 11: Aeropress -->
+      <div class="col-md-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-icon"><i class="bi bi-moisture"></i></div>
+          <h5>Cafetera Turca</h5>
+          <span class="badge bg-secondary mb-2">Presión de Pistón</span>
+          <p class="text-muted small">
+            Hervido tradicional con molienda ultra fina y especias, creando un café denso coronado con rica espuma.
+          </p>
+          <div class="fw-bold text-warning">Tiempo: 2:45 min</div>
+        </div>
+      </div>
+
+      <!-- Método 12: Aeropress -->
+      <div class="col-md-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-icon"><i class="bi bi-filter-circle-fill"></i></div>
+          <h5>Chorreador de Tela</h5>
+          <span class="badge bg-secondary mb-2">Filtrado de Malla</span>
+          <p class="text-muted small">
+            Método tradicional artesanal que retiene sedimentos gruesos mientras conserva todos los aceites naturales del grano.
+          </p>
+          <div class="fw-bold text-warning">Tiempo: 3:00 min</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Información de Contacto</h5>
+          <p><i class="bi bi-geo-alt-fill me-2"></i> Av. Los Cafetales 456, Miraflores</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> (01) 456-7890</p>
+          <p><i class="bi bi-envelope-fill me-2"></i> hola@baristascafeteria.com</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Información</h5>
+          <ul>
+            <li><a href="sobre-nosotros.html"><i class="bi bi-chevron-right me-1"></i> Nuestra Historia</a></li>
+            <li><a href="equipo.html"><i class="bi bi-chevron-right me-1"></i> Maestros Baristas</a></li>
+            <li><a href="menu-general.html"><i class="bi bi-chevron-right me-1"></i> Carta y Productos</a></li>
+            <li><a href="politicas-privacidad.html"><i class="bi bi-chevron-right me-1"></i> Políticas y Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="reservas.html"><i class="bi bi-chevron-right me-1"></i> Reserva de Mesas</a></li>
+            <li><a href="especialidades-cafe.html"><i class="bi bi-chevron-right me-1"></i> Catas y Métodos</a></li>
+            <li><a href="opiniones.html"><i class="bi bi-chevron-right me-1"></i> Reseñas de Clientes</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Boletín Informativo</h5>
+          <p>Suscríbete a novedades y promociones exclusivas.</p>
+          <form class="newsletter-form mt-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Tu correo" required>
+              <button class="btn btn-warning" type="submit">SUSCRÍBETE</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-center">
+        &copy; 2026 <strong>Baristas Cafetería</strong>. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Café y Cultura | Guías y Recetas Baristas</title>
+  <meta name="description" content="Artículos informativos sobre café de especialidad, conservación de granos, diferencias entre café Arábica y Robusta, y recetas caseras de barismo.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Fuentes tipográficas locales -->
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- CABECERA SUPERIOR -->
+  <header class="top-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 d-none d-md-flex align-items-center gap-2 text-muted small">
+          <i class="bi bi-telephone-fill text-warning fs-5"></i>
+          <span>Atención al cliente: <strong>(01) 456-7890</strong></span>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <a href="index.html" class="brand-logo text-decoration-none justify-content-center">
+            <i class="bi bi-cup-hot-fill"></i> BARISTAS
+          </a>
+        </div>
+        <div class="col-md-4 d-none d-md-flex justify-content-end align-items-center gap-4">
+          <a href="contacto.html" class="header-icon-link" title="Mi Cuenta"><i class="bi bi-person-fill"></i></a>
+          <a href="reservas.html" class="header-icon-link" title="Reservas"><i class="bi bi-calendar-check-fill"></i></a>
+          <a href="menu-general.html" class="header-icon-link position-relative" title="Carrito de Pedidos">
+            <i class="bi bi-bag-fill"></i>
+            <span class="badge-cart">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav class="navbar navbar-expand-lg main-navbar sticky-top">
+    <div class="container">
+      <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Nosotros
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sobre-nosotros.html"><i class="bi bi-book me-2"></i>Nuestra Historia</a></li>
+              <li><a class="dropdown-item" href="equipo.html"><i class="bi bi-people me-2"></i>Baristas y Personal</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Nuestra Carta
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="menu-general.html"><i class="bi bi-card-list me-2"></i>Carta Completa</a></li>
+              <li><a class="dropdown-item" href="especialidades-cafe.html"><i class="bi bi-cup-straw me-2"></i>Café de Especialidad</a></li>
+              <li><a class="dropdown-item" href="reposteria-bakery.html"><i class="bi bi-cake2 me-2"></i>Panadería y Postres</a></li>
+              <li><a class="dropdown-item" href="menu-ejecutivo-desayunos.html"><i class="bi bi-sun me-2"></i>Desayunos y Combos</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="opiniones.html">Opiniones</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <form class="d-flex search-input-group my-2 my-lg-0" role="search">
+          <input class="form-control" type="search" placeholder="Buscar artículo..." aria-label="Buscar">
+          <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO DE PÁGINA -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Blog de Café, Guías & Cultura</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Blog</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- CONTENIDO: ARTÍCULOS INFORMATIVOS -->
+  <main class="container my-5">
+    
+    <div class="row g-4">
+      
+      <!-- Artículo 1: Conservar Café en Casa -->
+      <div class="col-md-6 col-lg-4">
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/images/blog/blog-conservacion-granos.jpg" alt="Conservación de granos de café">
+          </div>
+          <div class="blog-body">
+            <div>
+              <span class="blog-date"><i class="bi bi-calendar3 me-1"></i> 20 Octubre 2026</span>
+              <h5 class="blog-title">Cómo Conservar el Café en Casa sin Perder Frescura</h5>
+              <p class="text-muted small">
+                ¿Guardas tu café en el refrigerador? Descubre por qué es un error común y cómo los envases herméticos con válvula desgasificadora protegen los aceites volátiles y aromas esenciales.
+              </p>
+            </div>
+            <button class="btn btn-read-more" onclick="alert('Abriendo artículo completo sobre conservación del café.');">Leer Artículo <i class="bi bi-arrow-right"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Artículo 2: Arábica vs Robusta -->
+      <div class="col-md-6 col-lg-4">
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/images/blog/blog-diferencias-arabica-robusta.jpg" alt="Diferencias granos Arábica y Robusta">
+          </div>
+          <div class="blog-body">
+            <div>
+              <span class="blog-date"><i class="bi bi-calendar3 me-1"></i> 14 Octubre 2026</span>
+              <h5 class="blog-title">Diferencias Clave entre Café Arábica y Robusta</h5>
+              <p class="text-muted small">
+                Analizamos altura de cultivo, porcentaje de cafeína, complejidad de notas y perfil de sabor para que elijas con criterio de experto al comprar tu próximo paquete.
+              </p>
+            </div>
+            <button class="btn btn-read-more" onclick="alert('Abriendo artículo completo sobre Arábica vs Robusta.');">Leer Artículo <i class="bi bi-arrow-right"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Artículo 3: Recetas Caseras de Café Frío -->
+      <div class="col-md-6 col-lg-4">
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/images/blog/blog-cold-brew.jpg" alt="Preparación de Cold Brew y café frío">
+          </div>
+          <div class="blog-body">
+            <div>
+              <span class="blog-date"><i class="bi bi-calendar3 me-1"></i> 05 Octubre 2026</span>
+              <h5 class="blog-title">3 Recetas de Cold Brew y Café Frío para Días Cálidos</h5>
+              <p class="text-muted small">
+                Aprende la receta paso a paso para preparar tu concentrado de infusión en frío usando recipientes comunes en tu cocina, con toques de naranja, cardamomo y vainilla.
+              </p>
+            </div>
+            <button class="btn btn-read-more" onclick="alert('Abriendo artículo completo con recetas de Cold Brew.');">Leer Artículo <i class="bi bi-arrow-right"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Artículo 4: El Agua y la Extracción -->
+      <div class="col-md-6 col-lg-4">
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/images/blog/blog-extraccion-temperatura.jpg" alt="Extracción de café con agua a temperatura controlada">
+          </div>
+          <div class="blog-body">
+            <div>
+              <span class="blog-date"><i class="bi bi-calendar3 me-1"></i> 28 Septiembre 2026</span>
+              <h5 class="blog-title">La Importancia del Agua y la Temperatura en el Café</h5>
+              <p class="text-muted small">
+                El 98% de tu taza es agua. Conoce cómo los minerales y una temperatura ideal entre 90°C y 94°C evitan el sabor amargo o la subextracción ácida.
+              </p>
+            </div>
+            <button class="btn btn-read-more" onclick="alert('Abriendo artículo completo sobre parámetros del agua.');">Leer Artículo <i class="bi bi-arrow-right"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Artículo 5: Maridaje de Repostería -->
+      <div class="col-md-6 col-lg-4">
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/images/blog/blog-maridaje-croissants.jpg" alt="Maridaje de croissants con café latte">
+          </div>
+          <div class="blog-body">
+            <div>
+              <span class="blog-date"><i class="bi bi-calendar3 me-1"></i> 19 Septiembre 2026</span>
+              <h5 class="blog-title">Guía de Maridaje: Panadería Artesanal y Tipos de Tueste</h5>
+              <p class="text-muted small">
+                Combina croissants mantecosos con cafés cítricos de tueste claro, y tartas intensas de chocolate con perfiles tostados de notas a avellana.
+              </p>
+            </div>
+            <button class="btn btn-read-more" onclick="alert('Abriendo artículo de maridaje.');">Leer Artículo <i class="bi bi-arrow-right"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Artículo 6: Comercio Justo -->
+      <div class="col-md-6 col-lg-4">
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/images/blog/blog-comercio-justo.jpg" alt="Comercio justo con productores de café">
+          </div>
+          <div class="blog-body">
+            <div>
+              <span class="blog-date"><i class="bi bi-calendar3 me-1"></i> 10 Septiembre 2026</span>
+              <h5 class="blog-title">¿Qué Significa Realmente el Comercio Justo en el Café?</h5>
+              <p class="text-muted small">
+                Una mirada transparente al impacto socioeconómico que genera pagar precios dignos a las familias caficultoras y cuidar los ecosistemas de cultivo.
+              </p>
+            </div>
+            <button class="btn btn-read-more" onclick="alert('Abriendo artículo sobre comercio justo.');">Leer Artículo <i class="bi bi-arrow-right"></i></button>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Información de Contacto</h5>
+          <p><i class="bi bi-geo-alt-fill me-2"></i> Av. Los Cafetales 456, Miraflores</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> (01) 456-7890</p>
+          <p><i class="bi bi-envelope-fill me-2"></i> hola@baristascafeteria.com</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Información</h5>
+          <ul>
+            <li><a href="sobre-nosotros.html"><i class="bi bi-chevron-right me-1"></i> Nuestra Historia</a></li>
+            <li><a href="equipo.html"><i class="bi bi-chevron-right me-1"></i> Maestros Baristas</a></li>
+            <li><a href="menu-general.html"><i class="bi bi-chevron-right me-1"></i> Carta y Productos</a></li>
+            <li><a href="politicas-privacidad.html"><i class="bi bi-chevron-right me-1"></i> Políticas y Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="reservas.html"><i class="bi bi-chevron-right me-1"></i> Reserva de Mesas</a></li>
+            <li><a href="especialidades-cafe.html"><i class="bi bi-chevron-right me-1"></i> Catas y Métodos</a></li>
+            <li><a href="opiniones.html"><i class="bi bi-chevron-right me-1"></i> Reseñas de Clientes</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Boletín Informativo</h5>
+          <p>Suscríbete a novedades y promociones exclusivas.</p>
+          <form class="newsletter-form mt-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Tu correo" required>
+              <button class="btn btn-warning" type="submit">SUSCRÍBETE</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-center">
+        &copy; 2026 <strong>Baristas Cafetería</strong>. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

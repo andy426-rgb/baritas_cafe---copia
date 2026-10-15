@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta Completa | Baristas - Bebidas, Postres y Brunch</title>
+  <meta name="description" content="Explora nuestra carta completa de café caliente, bebidas frías, repostería artesanal, sándwiches y opciones de brunch.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Fuentes tipográficas locales -->
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- CABECERA SUPERIOR -->
+  <header class="top-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 d-none d-md-flex align-items-center gap-2 text-muted small">
+          <i class="bi bi-telephone-fill text-warning fs-5"></i>
+          <span>Atención al cliente: <strong>(01) 456-7890</strong></span>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <a href="index.html" class="brand-logo text-decoration-none justify-content-center">
+            <i class="bi bi-cup-hot-fill"></i> BARISTAS
+          </a>
+        </div>
+        <div class="col-md-4 d-none d-md-flex justify-content-end align-items-center gap-4">
+          <a href="contacto.html" class="header-icon-link" title="Mi Cuenta"><i class="bi bi-person-fill"></i></a>
+          <a href="reservas.html" class="header-icon-link" title="Reservas"><i class="bi bi-calendar-check-fill"></i></a>
+          <a href="menu-general.html" class="header-icon-link position-relative" title="Carrito de Pedidos">
+            <i class="bi bi-bag-fill"></i>
+            <span class="badge-cart">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav class="navbar navbar-expand-lg main-navbar sticky-top">
+    <div class="container">
+      <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Nosotros
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sobre-nosotros.html"><i class="bi bi-book me-2"></i>Nuestra Historia</a></li>
+              <li><a class="dropdown-item" href="equipo.html"><i class="bi bi-people me-2"></i>Baristas y Personal</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+              Nuestra Carta
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="menu-general.html"><i class="bi bi-card-list me-2"></i>Carta Completa</a></li>
+              <li><a class="dropdown-item" href="especialidades-cafe.html"><i class="bi bi-cup-straw me-2"></i>Café de Especialidad</a></li>
+              <li><a class="dropdown-item" href="reposteria-bakery.html"><i class="bi bi-cake2 me-2"></i>Panadería y Postres</a></li>
+              <li><a class="dropdown-item" href="menu-ejecutivo-desayunos.html"><i class="bi bi-sun me-2"></i>Desayunos y Combos</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="opiniones.html">Opiniones</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <form class="d-flex search-input-group my-2 my-lg-0" role="search">
+          <input class="form-control" type="search" placeholder="Buscar en la carta..." aria-label="Buscar">
+          <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO DE PÁGINA -->
+  <section class="page-header">
+    <div class="container ">
+      <h1 class="text-white">Nuestra Carta y Precios</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Carta Completa</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- CONTENIDO: CARTA CON PESTAÑAS (TABS BOOTSTRAP) -->
+  <main class="container my-5">
+    
+    <!-- Filtros por categoría usando nav-pills de Bootstrap -->
+    <ul class="nav nav-pills justify-content-center mb-5 gap-2" id="menuTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active rounded-pill px-4" id="calientes-tab" data-bs-toggle="tab" data-bs-target="#calientes" type="button" role="tab">
+          <i class="bi bi-cup-hot me-1"></i> Bebidas Calientes
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-pill px-4" id="frias-tab" data-bs-toggle="tab" data-bs-target="#frias" type="button" role="tab">
+          <i class="bi bi-cup-straw me-1"></i> Bebidas Frías
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-pill px-4" id="panaderia-tab" data-bs-toggle="tab" data-bs-target="#panaderia" type="button" role="tab">
+          <i class="bi bi-cake2 me-1"></i> Repostería & Bakery
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-pill px-4" id="brunch-tab" data-bs-toggle="tab" data-bs-target="#brunch" type="button" role="tab">
+          <i class="bi bi-egg-fried me-1"></i> Sándwiches & Brunch
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="menuTabsContent">
+      
+      <!-- TAB 1: BEBIDAS CALIENTES -->
+      <div class="tab-pane fade show active" id="calientes" role="tabpanel">
+        <div class="row g-4">
+          <h1>Cafés Clásicos</h1>
+          <!-- Item 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Clásico</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/m1.webp" alt="Espresso Doble">
+              </div>
+              <h6 class="product-title">Espresso Doble</h6>
+              <p class="text-muted small">Extracción pura de 60ml de café de altura con crema consistente y cuerpo balanceado.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$3.50</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Espresso Doble"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Tradicional</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/m2.jpeg" alt="Café Americano">
+              </div>
+              <h6 class="product-title">Café Americano</h6>
+              <p class="text-muted small">Espresso doble diluido en agua caliente, de sabor suave pero con carácter persistente.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$3.20</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Café Americano"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Especialidad</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/m3.webp" alt="Café Filtrado (V60 / Drip)">
+              </div>
+              <h6 class="product-title">Café Filtrado (V60 / Drip)</h6>
+              <p class="text-muted small">Extracción artesanal por goteo que resalta las notas frutales y florales del grano.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$3.80</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Café Filtrado"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Gourmet</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/m4.jpg" alt="Flat White">
+              </div>
+              <h6 class="product-title">Flat White de Origen</h6>
+              <p class="text-muted small">Doble ristretto con microespuma sedosa y balance de acidez y dulzor.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.50</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Flat White"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <h1>Cafés Especiales & Con Leche</h1>
+          <!-- Item 5 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Latte Art</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/m5.jpg" alt="Capuchino Italiano">
+              </div>
+              <h6 class="product-title">Capuchino Italiano</h6>
+              <p class="text-muted small">Tercio exacto de espresso, leche al vapor y una suave capa de espuma de leche.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.20</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Capuchino Italiano"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Favorito</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/m6.jpg" alt="Café Moca Artesana">
+              </div>
+              <h6 class="product-title">Café Moca Artesanal</h6>
+              <p class="text-muted small">Espresso, leche texturizada y salsa de cacao orgánico al 70%.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.80</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Café Moca Artesanal"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Dulce</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/m7.jpg" alt="Caramel Macchiato">
+              </div>
+              <h6 class="product-title">Caramel Macchiato</h6>
+              <p class="text-muted small">Leche manchada con espresso, terminada con hilos de caramelo dulce y aroma a vainilla.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$$4.60</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Caramel Macchiato"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Casa</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/m8.jpg" alt="Latte de Vainilla y Avellana">
+              </div>
+              <h6 class="product-title">Latte de Vainilla y Avellana</h6>
+              <p class="text-muted small">Espresso suave combinado con leche cremosa y jarabe natural de avellana y vainilla.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.70</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Latte de Vainilla y Avellana"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <h1>Infusiones & Bebidas de Especialidad</h1>
+          <!-- Item 9 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Orgánico</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/m9.jpg" alt="Matcha Latte Caliente">
+              </div>
+              <h6 class="product-title">Matcha Latte Caliente</h6>
+              <p class="text-muted small">Té verde matcha ceremonial de Japón batido a mano con leche suave al vapor.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.90</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Matcha Latte"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 10 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Aromático</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/m10.webp" alt="Chai Latte Especiado">
+              </div>
+              <h6 class="product-title">Chai Latte Especiado</h6>
+              <p class="text-muted small">Infusión de té negro con especias de la India (canela, cardamomo, jengibre) y leche cremosa.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.50</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Chai Latte Especiado"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 11 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Especial</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/m11.webp" alt="Chocolate Caliente Supremo">
+              </div>
+              <h6 class="product-title">Chocolate Caliente Supremo</h6>
+              <p class="text-muted small">Mezcla cremosa de chocolate de repostería artesanal con toque de canela y marshmallows.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.20</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Chocolate Caliente Supremo"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 12 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Herbal</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/m12.jpg" alt="Té de Frutos Rojos e Infusión">
+              </div>
+              <h6 class="product-title">Té de Frutos Rojos e Infusión</h6>
+              <p class="text-muted small">Mezcla natural de arándanos, frambuesas, hibiscus y menta fresca infundidos al momento.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$3.60</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Té de Frutos Rojos e Infusión"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: BEBIDAS FRÍAS -->
+      <div class="tab-pane fade" id="frias" role="tabpanel">
+        <div class="row g-4">
+          <h1>Cold Brews & Bebidas Refrescantes</h1>
+          <!-- Item 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Cold Brew</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/b1.jpg" alt="Cold Brew Clásico">
+              </div>
+              <h6 class="product-title">Cold Brew 18 Horas</h6>
+              <p class="text-muted small">Infusión en frío por 18 horas para notas dulces, baja acidez y frescura.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$5.20</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Cold Brew 18 Horas"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Refrescante</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/b2.jpg" alt="Espresso Tonic">
+              </div>
+              <h6 class="product-title">Espresso Tonic Cítrico</h6>
+              <p class="text-muted small">Espresso de tueste medio servido sobre agua tónica premium, hielo y rodaja de pomelo.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$5.50</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Espresso Tonic"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Cítrico</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/b3.jpg" alt="Iced Americano Naranjada">
+              </div>
+              <h6 class="product-title">Iced Americano Naranjada</h6>
+              <p class="text-muted small">Espresso intenso combinado con jugo natural de naranja recién exprimida sobre hielo.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.80</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Iced Americano Naranjada"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Casa</span>
+              <div class="product-image-container">
+                  <img src="assets/images/menu-general/b4.jpg" alt="Cold Brew Latte Vainilla">
+              </div>
+              <h6 class="product-title">Cold Brew Latte Vainilla</h6>
+              <p class="text-muted small">Concentrado de Cold Brew combinado con leche vegetal o entera y toque suave de vainilla.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$5.40</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Cold Brew Latte Vainillal"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <h1>Frappés & Bebidas Cremosas</h1>
+          <!-- Item 5 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Frappé</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/b5.jpeg" alt="Frappé Caramelo Crunch">
+              </div>
+              <h6 class="product-title">Frappé Caramelo Crunch</h6>
+              <p class="text-muted small">Café licuado con hielo, caramelo salado, trozos crocantes y topping de crema chantilly artesanal.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$5.80</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Frappé Caramelo Crunch"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Dulce</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/b6.jpg" alt="Frappé Moka Blanco">
+              </div>
+              <h6 class="product-title">Frappé Moka Blanco</h6>
+              <p class="text-muted small">Mezcla helada de espresso, leche, chocolate blanco premium y virutas de chocolate negro.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$5.90</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Frappé Moka Blanco"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Especial</span>
+              <div class="product-image-container">
+                  <img src="assets/images/menu-general/b7.jpg" alt="Frappé Cookies & Cream">
+              </div>
+              <h6 class="product-title">Frappé Cookies & Cream</h6>
+              <p class="text-muted small">Licuado cremoso de galletas Oreo, base de café espresso, leche y crema batida.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$6.00</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Frappé Cookies & Cream"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Clásico</span>
+              <div class="product-image-container">
+                  <img src="assets/images/menu-general/b8.jpg" alt="Iced Caramel Macchiato">
+              </div>
+              <h6 class="product-title">Iced Caramel Macchiato</h6>
+              <p class="text-muted small">Capas de leche fría con hielo, jarabe de vainilla, espresso flotante y salsa de caramelo.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$5.50</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Iced Caramel Macchiato"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <h1>Tés Helados & Mocktails</h1>
+          <!-- Item 9 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Té Orgánico</span>
+              <div class="product-image-container">
+                  <img src="assets/images/menu-general/b9.jpg" alt="Iced Matcha Ceremonial">
+              </div>
+              <h6 class="product-title">Iced Matcha Ceremonial</h6>
+              <p class="text-muted small">Matcha japonés grado ceremonial servido sobre hielo con leche de avena y jarabe de agave.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$5.90</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Iced Matcha Ceremonial"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 10 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Especiado</span>
+              <div class="product-image-container">
+                  <img src="assets/images/menu-general/b10.jpg" alt="Iced Chai Latte">
+              </div>
+              <h6 class="product-title">Iced Chai Latte</h6>
+              <p class="text-muted small">Concentrado de té chai especiado servido frío con leche de almendras y canela en polvo.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$5.20</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Iced Chai Latte"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 11 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Mocktail</span>
+              <div class="product-image-container">
+                  <img src="assets/images/menu-general/b11.jpg" alt="Limonada de Hibiscus & Menta">
+              </div>
+              <h6 class="product-title">Limonada de Hibiscus & Menta</h6>
+              <p class="text-muted small">Infusión fría de flor de Jamaica (hibiscus) combinada con limonada casera y hojas de menta.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.50</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Limonada de Hibiscus & Menta"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 12 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Frutal</span>
+              <div class="product-image-container">
+                  <img src="assets/images/menu-general/b12.jpg" alt="Iced Berry Infusion">
+              </div>
+              <h6 class="product-title">Iced Berry Infusion</h6>
+              <p class="text-muted small">Té helado de frutos rojos silvestre con trozos de fresas, arándanos y toque de soda con gas.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.80</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Iced Berry Infusion"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: REPOSTERÍA & BAKERY -->
+      <div class="tab-pane fade" id="panaderia" role="tabpanel">
+        <div class="row g-4">
+          <h1>Viennoiserie & Horno Clásico</h1>
+          <!-- Item 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Francés</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/r1.jpg" alt="Croissant Francés">
+              </div>
+              <h6 class="product-title">Croissant Francés</h6>
+              <p class="text-muted small">Hojaldre 100% mantequilla pura, crujiente por fuera y aireado por dentro.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$3.20</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Croissant Francés"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag badge-gluten-free">Vegano</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/r2.jpg" alt="Cinnamon Roll Horneado">
+              </div>
+              <h6 class="product-title">Cinnamon Roll Horneado</h6>
+              <p class="text-muted small">Rollo de canela de Ceilán con glaseado de vainilla y nueces pecanas</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$3.80</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Cinnamon Roll Horneado"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag badge-vegan">Hojaldre</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/r3.jpg" alt="Pain au Chocolat">
+              </div>
+              <h6 class="product-title">Pain au Chocolat</h6>
+              <p class="text-muted small">Masa hojaldrada artesanal rellena con dos barras de chocolate amargo al 60%.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$3.50</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Pain au Chocolat"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Artesanal</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/r4.jpg" alt="Danesa de Manzana y Canela">
+              </div>
+              <h6 class="product-title">Danesa de Manzana y Canela</h6>
+              <p class="text-muted small">Masa hojaldrada crujiente rellena de compota de manzana horneada y toque de canela.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$3.60</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Danesa de Manzana y Canela"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <h1>Tortas & Pasteles de Autor</h1>
+          <!-- Item 5 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Sin Gluten</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/r5.jpg" alt="Tarta Fudge Choco-Berry">
+              </div>
+              <h6 class="product-title">Tarta Fudge Choco-Berry</h6>
+              <p class="text-muted small">Bizcocho húmedo de cacao sin gluten cubierto con coulis de frutos rojos.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.90</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Tarta Fudge Choco-Berry"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Casero</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/r6.jpg" alt="Cheesecake de Arándanos">
+              </div>
+              <h6 class="product-title">Cheesecake de Arándanos</h6>
+              <p class="text-muted small">Cremosa receta tradicional horneada a fuego lento con mermelada casera.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.60</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Cheesecake de Arándanos"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Favorito</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/r7.jpg" alt="Red Velvet Layer Cake">
+              </div>
+              <h6 class="product-title">Red Velvet Layer Cake</h6>
+              <p class="text-muted small">Capas suaves de pastel velvet con suave cobertura y relleno de frosting de queso crema.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.80</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Red Velvet Layer Cake"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Especial</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/r8.jpg" alt="Tarta de Limón & Merengue">
+              </div>
+              <h6 class="product-title">Tarta de Limón & Merengue</h6>
+              <p class="text-muted small">Base suflé crujiente rellena de crema ácida de limón natural con merengue italiano tostado.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.50</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Tarta de Limón & Merengue"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <h1>Galletas, Muffins & Crepes</h1>
+          <!-- Item 9 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Delicia</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/r9.jpg" alt="Crepes de Fresa y Nocciola">
+              </div>
+              <h6 class="product-title">Crepes de Fresa y Nocciola</h6>
+              <p class="text-muted small">Crepes delgados hechos al momento, rellenos de crema de avellana, fresas frescas y chantilly.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.70</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Crepes de Fresa y Nocciola"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 10 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Esponjoso</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/r10.jpg" alt="Muffin de Arándanos & Limón">
+              </div>
+              <h6 class="product-title">Muffin de Arándanos & Limón</h6>
+              <p class="text-muted small">Muffin horneado diariamente, súper esponjoso con arándanos frescos y streusel crujiente arriba.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$3.40</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Muffin de Arándanos & Limón"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 11 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Receta Casa</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/r11.jpg" alt="Choco-Chip Cookie">
+              </div>
+              <h6 class="product-title">Choco-Chip Cookie XL</h6>
+              <p class="text-muted small">Galleta horneada estilo Nueva York, suave por dentro con chispas de chocolate fundido.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$2.90</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="hoco-Chip Cookie"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 12 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Intenso</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/r12.jpg" alt="Brownie Fudgy de Avellana">
+              </div>
+              <h6 class="product-title">Brownie Fudgy de Avellana</h6>
+              <p class="text-muted small">Brownie denso de chocolate oscuro al 70% con trozos de avellana tostada y centro meloso.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$3.60</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Brownie Fudgy de Avellana"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: SÁNDWICHES & BRUNCH -->
+      <div class="tab-pane fade" id="brunch" role="tabpanel">
+        <div class="row g-4">
+          <h1>Sándwiches Artesanales & Prensados</h1>
+          <!-- Item 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Premium</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/s1.jpg" alt="Sándwich de Jamón Serrano">
+              </div>
+              <h6 class="product-title">Sándwich de Jamón Serrano</h6>
+              <p class="text-muted small">Focaccia artesanal con jamón curado, queso gouda y pesto de albahaca.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$6.80</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Sándwich de Jamón Serrano"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Ligero</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/s2.jpg" alt="Croissant Caprese">
+              </div>
+              <h6 class="product-title">Croissant Caprese Caliente</h6>
+              <p class="text-muted small">Mozzarella fior di latte fundida, tomate deshidratado y orégano fresco.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$5.20</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Croissant Caprese Caliente"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Favorito</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/s3.jpg" alt="Club Sándwich">
+              </div>
+              <h6 class="product-title">Club Sándwich Clásico</h6>
+              <p class="text-muted small">Triple capa en pan brioche con pechuga de pollo, tocino crocante, queso cheddar, lechuga y tomate.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$6.50</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Club Sándwich Clásico"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Especial</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/s4.webp" alt="Bagel de Salmón & Queso Crema">
+              </div>
+              <h6 class="product-title">Bagel de Salmón & Queso Crema</h6>
+              <p class="text-muted small">Bagel tostado con semillas de sésamo, salmón ahumado, queso crema, alcaparras y eneldo.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$7.20</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Bagel de Salmón & Queso Crema"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <h1>Toasts & Tostadas de Autor</h1>
+          <!-- Item 5 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Saludable</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/s5.jpg" alt="Avocado Toast & Huevo Poché">
+              </div>
+              <h6 class="product-title">Avocado Toast & Huevo Poché</h6>
+              <p class="text-muted small">Pan de masa madre, palta cremosa, huevo pochado y semillas tostadas.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$6.20</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Avocado Toast & Huevo Poché"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Gourmet</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/s6.jpg" alt="Toast de Champiñones & Trufa">
+              </div>
+              <h6 class="product-title">Toast de Champiñones & Trufa</h6>
+              <p class="text-muted small">Pan rústico tostado con salteado de hongos silvestres, queso parmesano y un toque de aceite de trufa.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$6.40</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Toast de Champiñones & Trufa"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Casa</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/s7.jpg" alt="Tostada Benedictina con Tocino">
+              </div>
+              <h6 class="product-title">Tostada Benedictina con Tocino</h6>
+              <p class="text-muted small">Pan de masa madre con tocino ahumado, huevo pochado y salsa holandesa casera.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$6.60</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Tostada Benedictina con Tocino"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Dulce</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/s8.jpg" alt="Brioche French Toast">
+              </div>
+              <h6 class="product-title">Brioche French Toast</h6>
+              <p class="text-muted small">Pan brioche doradito en mantequilla, servido con frutos rojos, canela y miel de maple.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$5.80</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Brioche French Toast"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <h1>Waffles & Platos de Brunch</h1>
+          <!-- Item 9 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Completo</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/s9.jpg" alt="Waffles Belgas con Frutose">
+              </div>
+              <h6 class="product-title">Waffles Belgas con Frutos</h6>
+              <p class="text-muted small">Waffles dorados con fresas frescas, plátano, miel de maple y crema.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$5.90</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Waffles Belgas con Frutos"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 10 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Especial</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/s10.jpg" alt="Waffles Crocantes con Pollo & Miel">
+              </div>
+              <h6 class="product-title">Waffles Crocantes con Pollo & Miel</h6>
+              <p class="text-muted small">Waffle belga crujiente acompañado de tiras de pollo frito empanizado y hilos de miel especiada.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$7.50</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Waffles Crocantes con Pollo & Miel"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 11 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Proteico</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/s11.jpg" alt="Omelette Tres Quesos & Espinaca">
+              </div>
+              <h6 class="product-title">Omelette Tres Quesos & Espinaca</h6>
+              <p class="text-muted small">Omelette esponjoso de huevos de libre pastoreo relleno de queso mozzarella, gouda, parmesano y espinaca.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$5.80</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Omelette Tres Quesos & Espinaca"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 12 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <span class="badge-tag">Orgánico</span>
+              <div class="product-image-container">
+                <img src="assets/images/menu-general/s12.jpg" alt="Bowl de Avena & Fruta de Estación">
+              </div>
+              <h6 class="product-title">Bowl de Avena & Fruta de Estación</h6>
+              <p class="text-muted small">Avena tibia cocida en leche de almendras con mantequilla de maní, banana, arándanos y chía.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="product-price">$4.90</span>
+                <button class="btn btn-sm btn-coffee-primary btn-add-cart" data-name="Bowl de Avena & Fruta de Estación"><i class="bi bi-plus"></i> Pedir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Información de Contacto</h5>
+          <p><i class="bi bi-geo-alt-fill me-2"></i> Av. Los Cafetales 456, Miraflores</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> (01) 456-7890</p>
+          <p><i class="bi bi-envelope-fill me-2"></i> hola@baristascafeteria.com</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Información</h5>
+          <ul>
+            <li><a href="sobre-nosotros.html"><i class="bi bi-chevron-right me-1"></i> Nuestra Historia</a></li>
+            <li><a href="equipo.html"><i class="bi bi-chevron-right me-1"></i> Maestros Baristas</a></li>
+            <li><a href="menu-general.html"><i class="bi bi-chevron-right me-1"></i> Carta y Productos</a></li>
+            <li><a href="politicas-privacidad.html"><i class="bi bi-chevron-right me-1"></i> Políticas y Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="reservas.html"><i class="bi bi-chevron-right me-1"></i> Reserva de Mesas</a></li>
+            <li><a href="especialidades-cafe.html"><i class="bi bi-chevron-right me-1"></i> Catas y Métodos</a></li>
+            <li><a href="opiniones.html"><i class="bi bi-chevron-right me-1"></i> Reseñas de Clientes</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Boletín Informativo</h5>
+          <p>Suscríbete a novedades y promociones exclusivas.</p>
+          <form class="newsletter-form mt-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Tu correo" required>
+              <button class="btn btn-warning" type="submit">SUSCRÍBETE</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-center">
+        &copy; 2026 <strong>Baristas Cafetería</strong>. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
